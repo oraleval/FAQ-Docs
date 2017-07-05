@@ -48,7 +48,58 @@
 > 例如定义的关键字是P E，句式中写的是pe，会导致关键字匹配不上，从而得分低
 * **英文简称建议中间加个空格，可以使评分更加准确**
 > 例如NLP，可以写成N L P，因为有的缩略词可能是生词，分开写可以评分更加准确，当然一些常见的缩略词如PE确定在引擎词典中，不分开写也是可以的
+* **变量和句式的编写**
+> 注意变量的个数
+>> 一个变量中的个数不宜太多，或者重复的变量不宜太多，否则算法在匹配的时候，可能因为都是同一个单词，在路径查找的时候，在是别的时候容易出现问题，例如：
+>> <a> = my mom|my mother|my dad|my father|my uncle|my sister|my brother|my older sister|my younger sister|my older brother|my younger brother|my boyfriend|my girlfriend|my aunt|my cousin|my parents|my grandparents|my grandma|grandmother|granpa|grandfather|tom|mary|kelly|david|peter|john|nancy|lisa|steven|my friends|my friend tom|my friend mary|my friend kelly|my friend david|my friend peter|my friend john|my friend nancy|my friend lisa|my friend steven|classmates|my classmates|my best friend|some of my friends
+>> 该变量中都存在my这个词，多了容易识别出错，可以去掉一些不必要的，例如my friend tom|my friend mary|my friend kelly|my friend david|my friend peter|my friend john|my friend nancy|my friend lisa|my friend steven
+> 注意变量的有效性
+>> 在一些开放的问答题中，例如你平时的爱好是什么，这种答案不建议包含一些常用的国外的运动。例如<a> = (badminton|football|basketball|volleyball|tennis|table tennis|pingpong|baseball|pool|soccer|american football|golf|hockey
+这里的soccer、american football和hockey都不是国内的主流运动，不容易被学生回答到，还增加了句式展开的个数，不建议添加
+> 注意变量的常用性
+>> 当一个变量的值比较多时，建议通用类型的说法优先覆盖，减少不通用的说法，例如<b> = (usually|always|often|mostly|normally|in general|most of time，在跟句式结合的时候，normally|in general|most of time并不是最常用的一些说法，被学生说到的几率相对不多，但是多加了会影响整体的评分，建议不加
+> 注意句式的简洁性
+>> 部分句式展开前半句基本都是重复的，例如以下句式：
+>> <b>
+>> <b> competition
+>> i would like to <a> the <b>
+>> i'd like to <a> the <b>
+>> i would like to <a> the <b> at the sports meeting
+>> i'd like to <a> the <b> at the sports meeting
+>> i would like to <a> the <b> at the school sports meeting
+>> i'd like to <a> the <b> at the school sports meeting
+>> i would like to <a> the <b> competition
+>> i'd like to <a> the <b> competition
+>> i would like to <a> the <b> competition at the sports meeting
+>> i would like to <a> the <b> competition at the school sports meeting
+>> i'd like to <a> the <b> competition at the school sports meeting
+>> 其中<a> = take part in|participate in
+>> <b> = high jump|shot put|long jump|triple jump|discus throw|javelin|basketball|volleyball|table tennis|ping pong|tennis|football|soccer|swimming|hockey|badminton|running race|race|one hundred meter hurdles|four hundred meter hurdles|one hundred and ten meter hurdles|relay|relay race|four by one hundred meter relay|four by four hundred meter relay|sprint|five thousand meter run|five thousand meter race|one thousand and five hundred meter run|one thousand and five hundred meter race|one hundred meter dash|one hundred meter sprint|two hundred meter sprint|two hundred meter race|four hundred meter race|eight hundred
+>> 所有的句式前半部分几乎都是i would like to <a> the <b>或i'd like to <a> the <b>，而展开后<b>这个句式占有的比率会非常低，所以直接说<b>这个句式会存在匹配不上的情况或是被匹配上的概率会非常低，此时建议精简句式，将以上重复的句式都去掉，留几个简洁的主流句式，如果学生多说，并且也是正确的，扣分不会很多，建议将以上句式精简为：
+>> <b>
+>> <b> <a>
+>> <b> competition
+>> i would like to <a> the <b>
+>> i would like to <a> the <b> competition
+>> i 'd like to <a> the <b> match
+>> 精简的主要原则：覆盖最常用和最基本的说法，避免啰嗦的说法；这种情况下，如果学生多说了，也不会扣分很明显
 
+> 注意句式的展开条数
+>> 句式展开后的条数不能超过2000条，这个置题工具可以检测。在不超出这个范围的前提下，精简更好
+> 注意句式之间的平衡性
+>> 当句式比较多的时候，某个句式展开后非常多，而某些句式展开后会非常少，这样会导致比较少的句式在识别的时候，被识别的概率相对较小，所以建议补充一些无关句式，以使被匹配上的概率相对多一点，前提也是在展开后的条数在2000条以内，例如以下句式：
+>> <b>
+>> <b> competition
+>> i would like to <a> the <b>
+>> i would like to <a> the <b> competition
+>> i would like to <a> the <b> at the school sports meeting
+>> 其中<b>开头的句式会比较少，可以再额外补充一个<b>开头的句式（学生不会用到也没有关系），再精简一下 i 开头的句式，以使被匹配上的概率增加，变成如下：
+
+>> <b>
+>> <b> competition
+>> <b> <a>
+>> i would like to <a> the <b>
+>> i would like to <a> the <b> competition
 
 
 ### <a name="retell"></a> 口头作文语法编写注意事项
