@@ -32,7 +32,7 @@
 
 #### 选项含义
 
-* stress(完成,等待上线)
+* stress
 
 值为true，打开重音功能，值false或不填，都不开启重音功能
 
@@ -42,16 +42,16 @@
 
 高级功能: subject:可以是选择题(select), 问答题(qa), 口头作文(composition), 检错纠错, 模仿评测(imitate)
 
-point(完成,等待上线)
+point
 
 分制: 现在支持4或者8分制两种情况
 
-* AudioCheck(完成,等待上线)
+* AudioCheck
 
 设置为true，打开音质检测功能，检测音量高，低，截幅，信噪比。分别是volume-low, volume-high, clipping, noise。
 在引擎返回的json会多出audioCheck:"volume-low,noise" 类似字段。如果检测出多种情况，结果会用,号隔开。
 
-#### 小例子
+#### 使用示例
 * 使用point的示例
 ```
 # cat point.json
