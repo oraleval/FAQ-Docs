@@ -19,3 +19,14 @@
 | words | array | 每个词的评测结果 |
 | text | string | 结果格式版本及版本号 | 词的字符串，使用"sil"表示语音中的静音段 |
 | type | int | 类型，共有6种类型，分别是：0 多词；1 漏词；2 正常词；3 错误词；4 静音；5 重复词；8 生词 |
+| sentSample | array | 句式标准文本 |
+| sentScore | array | 句式总分 |
+| sentPronunciation | array | 句式标准度得分 |
+| sentFluency | array | 句式流利度得分 |
+| sentIntegrity | array | 句式完整度得分 |
+| keySample | array | 关键词sample（包括关键词和每个关键词的得分 |
+| keysScore | array | 关键词总分 |
+| keysPronunciation | array | 关键词标准度得分 |
+| keysIntegrity | array | 关键词完整度得分 |
+| keysFluency | array | 关键词流利度 |
+
