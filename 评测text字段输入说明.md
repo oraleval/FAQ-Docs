@@ -45,14 +45,15 @@ json格式的text通过<a href="http://101.231.106.182:5000">置题工具</a>编
 ### 3.text字段开启特定功能
 
 ```
-"OralConf": {
+{"OralConf": {
         "stress": true,
         "subject": "word",
         "point" :4,
         "phone":true
     },
      "AudioCheck": true,
-    "DisplayText": "hello world
+    "DisplayText": "hello world"
+ }
 ```
 
 
