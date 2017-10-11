@@ -65,5 +65,5 @@ json格式的text通过<a href="http://101.231.106.182:5000">置题工具</a>编
 >| AudioCheck | 音质检测，检测用户录音环境是否符合评测的要求 | 检测项：音量过小、截幅、截断、噪音，返回结果中的值带便置信度，即可信程度，值范围0-10，数值越大的那项，最可能有问题 | 建议将置信度最高的那个问题返回给客户，提示用户改正姿势重读 | audioCheck |
 >| DisplayText | 必填项 | 评测文本 |  |  |
 
-各个功能返回的字段请参考<a href="https://github.com/oraleval/FAQ-Docs/blob/master/Json%20Description.md">评测结果json字段说明</a>
+**各个功能返回的json字段请参考<a href="https://github.com/oraleval/FAQ-Docs/blob/master/Json%20Description.md">评测结果json字段说明</a>**
 
