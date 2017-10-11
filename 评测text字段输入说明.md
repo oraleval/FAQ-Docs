@@ -62,7 +62,7 @@ json格式的text通过<a href="http://101.231.106.182:5000">置题工具</a>编
 >| subject | 该字段可以区分题型 | subject设置为指定的值，即可区分题型：word(单词)，sentence(句子)，chapter(篇章)，选择题(select)，问答题(qa)， 口头作文(composition)， 检错纠错(evalcheck)， 模仿评测(imitate) | 该功能主要用于数据统计，不影响评测 | 无 |
 >| point | 定制的打分制，当前默认输出是百分制 | point当前可选值为4和8，即可以按照4分制和8分制输出打分 | 默认不使用 | standardScore |
 >| phone | 输出tone信息，可用于画用户发音曲线 | 值为true则开启 | 默认不开启 | tone |
->| AudioCheck | 音质检测，检测用户录音环境是否符合评测的要求 | 检测项：音量过小、截幅、截断、噪音，返回结果中的值带便置信度，即可信程度，值范围0-10，数值越大的那项，最可能有问题 | 建议将置信度最高的那个问题返回给客户，提示用户改正姿势重读 | audioCheck |
+>| AudioCheck | 音质检测，检测用户录音环境是否符合评测的要求 | 检测项：音量过小、截幅、截断、噪音，返回结果中的值代表置信度，即可信程度，值范围0-10，数值越大的那项最可能有问题 | 建议将置信度最高的那个问题返回给客户，提示用户改正姿势重读 | audioCheck |
 >| DisplayText | 必填项 | 评测文本 |  |  |
 
 **各个功能返回的json字段请参考<a href="https://github.com/oraleval/FAQ-Docs/blob/master/Json%20Description.md">评测结果json字段说明</a>**
