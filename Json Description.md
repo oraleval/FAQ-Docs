@@ -1,9 +1,8 @@
 ### 评测返回结果中Json字段说明
 
 
-| | | |
-| ----- | ----- | ----- |
 | 名称| 类型 | 说明 |
+| :----- | :----- | :----- |
 | version | string | 结果格式版本及版本号 |
 | lines | array | 每行输入文本的评测结果 |
 | sample | string | 输入的标准文本 |
@@ -29,4 +28,8 @@
 | keysPronunciation | array | 关键词标准度得分 |
 | keysIntegrity | array | 关键词完整度得分 |
 | keysFluency | array | 关键词流利度 |
+| standardScore | string | 客户定制，输出的分制，当前含有4分制和8分制 |
+| StressOfSent | string | 句子重读，每个单词都输出，0：该单词没有被重读；1：该单词被重读 |
+| StressOfWord | string | 单词重音，将用户发音和词典的重音位置做比较，0：该单词重音朗读错误；1：该单词重音朗读错误 |
+| tone | array | 输出全部信息，数据可以用于画用户的发音曲线，目前只有内部在使用 |
 | audiocheck | array | 音质检测结果。volume：音量过小的置信度；clipping：截幅的置信度；noise：噪音过大的置信度；cut:截断的置信度；too short：是否音频过短；emptyAudio：是否是空音频。备注：置信度的范围是0-10，数字越大，表示存在问题的可能性越大 |
