@@ -45,6 +45,7 @@ json格式的text通过<a href="http://101.231.106.182:5000">置题工具</a>编
 ### 3.text字段开启特定功能
 
 ```
+以下各个功能字段需要时才传入，除了"DisplayText"项，其他均为可选项
 {"OralConf": {
         "stress": true,
         "subject": "word",
