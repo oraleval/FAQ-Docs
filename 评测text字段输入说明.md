@@ -93,7 +93,7 @@ json格式的text通过<a href="http://101.231.106.182:5000">置题工具</a>编
 >> 检测项：音量过小、截幅、截断、噪音<br>返回结果中的值代表置信度，即可信程度，值范围0-10，数值越大的那项最可能有问题，建议将置信度最高的那个问题返回给客户，提示用户改正姿势重读
 
 >> 返回结果字段：audioCheck
->> 字典类型，包含volume、clipping、noise、cut,tooShort,emptyAudio，建议判断的优先级emptyAudio>tooShort>其他项，如果emptyAudio的值为true，则说明音频为空，可以直接提示用户未检测到录音等；如果tooShort为true,则提示用户重新录音
+>> 字典类型，包含volume（音量过小）、clipping（截幅）、noise（信噪比）、cut（截断）,tooShort（音频过短）,emptyAudio（空音频），建议判断的优先级emptyAudio>tooShort>其他项，如果emptyAudio的值为true，则说明音频为空，可以直接提示用户未检测到录音等；如果tooShort为true,则提示用户重新录音
 
 >> **强烈建议：**当打分较高时，不取音质检测的结果，例如当分数>70时，可以忽略音质检测结果，这样可以有效降低一部分误检数据导致的用户体验问题。音质检测主要作为评测的辅助功能，将打分低的一部分音频检测出来，但需要减少因为误检导致的用户体验问题
 
