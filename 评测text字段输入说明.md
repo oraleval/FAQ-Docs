@@ -102,7 +102,7 @@ json格式的text通过<a href="http://101.231.106.182:5000">置题工具</a>编
 
 > 描述：评测文本
 
-> 返回结果字段：sample text
+> 返回结果字段：sample
 
 
 **各个功能返回的json字段请参考<a href="https://github.com/oraleval/FAQ-Docs/blob/master/Json%20Description.md">评测结果json字段说明</a>**
