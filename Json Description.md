@@ -33,4 +33,4 @@
 | StressOfSent | string | 句子重读，每个单词都输出，0：该单词没有被重读；1：该单词被重读 |
 | StressOfWord | string | 单词重音，将用户发音和词典的重音位置做比较，0：该单词重音朗读错误；1：该单词重音朗读正确 |
 | tone | array | 输出全部信息，数据可以用于画用户的发音曲线，目前只有内部在使用 |
-| audiocheck | array | 音质检测结果。volume：音量过小的置信度；clipping：截幅的置信度；noise：噪音过大的置信度；cut:截断的置信度；too short：是否音频过短；emptyAudio：是否是空音频。备注：置信度的范围是0-10，数字越大，表示存在问题的可能性越大 |
+| audiocheck | array | 音质检测结果。volume：音量过小的置信度；clipping：截幅的置信度；noise：噪音过大的置信度；cut:截断的置信度；too short：是否音频过短；emptyAudio：是否是空音频。<br>备注：置信度的值为0和10，10代表可能存在该项音质问题，0代表该项检测正常 |
