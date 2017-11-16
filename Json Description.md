@@ -19,7 +19,7 @@
 | fluency | double | 录入语音的流利度 |
 | words | array | 每个词的评测结果 |
 | text | string | 单词或音素文本 | 词的字符串，使用"sil"表示语音中的静音段 |
-| type | int | 类型，共有6种类型，分别是：<br>0 多词：仅B，C，G模式出现，当朗读内容大于文本内容时，多余的单词type值为0；eg：文本：nice to meet you，音频：nice nice to meet you，第二个nice的type值为0<br>1 漏词：所有模式都有，当朗读内容小于文本内容时，未读的单词type值为1；eg：文本：nice to meet you，音频：nice meet you，结果中to的type值为1<br>2 正常词：所有模式都有，识别正常的词<br>3 错误词：仅B，C，G模式出现，当朗读的文本某个单词识别成文本中其他单词时，该单词type值为3。 eg：文本：nice to meet you，音频：nice you meet you，结果中第一个you的type值为3；<br>4 静音：所有模式；<br>5 重复词：预留接口，未实现；<br>7 空格or标点：仅E模式，空格和标点的结构type值为7；<br>8 生词：所有模式|
+| type | int | 类型，共有6种类型，分别是：<br>0 多词：仅B，C，G模式出现，当朗读内容大于文本内容时，多余的单词type值为0；eg：文本：nice to meet you，音频：nice nice to meet you，第二个nice的type值为0；<br>1 漏词：所有模式都有，当朗读内容小于文本内容时，未读的单词type值为1；eg：文本：nice to meet you，音频：nice meet you，结果中to的type值为1；<br>2 正常词：所有模式都有，识别正常的词；<br>3 错误词：仅B，C，G模式出现，当朗读的文本某个单词识别成文本中其他单词时，该单词type值为3。 eg：文本：nice to meet you，音频：nice you meet you，结果中第一个you的type值为3；<br>4 静音：所有模式；<br>5 重复词：预留接口，未实现；<br>7 空格or标点：仅E模式，空格和标点的结构type值为7；<br>8 生词：所有模式|
 | sentSample | array | 句式标准文本 |
 | sentScore | array | 句式总分 |
 | sentPronunciation | array | 句式标准度得分 |
