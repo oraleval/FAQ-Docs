@@ -8,11 +8,12 @@
 | EvalType | string | 评测类型：general（朗读评测）、askandanswer（情景问答）、composition（作文） |
 | sample | string | 输入的标准文本 |
 | usertext | string | 用户实际朗读的文本（语音识别结果） |
+| subwords | array | 包含单词的音标、开始时间、结束时间、分数、音量信息 |
 | begin | double | 开始时间，单位为秒 |
 | end | double | 开始时间，单位为秒 |
 | volume | double | 音量 |
 | score | string | 分值 |
-| subwords | double | 单词包含的音标 |
+| subtext | string | 音标或重音符号信息 |
 | integrity | double | 录入语音的完整度 |
 | pronunciation | double | 录入语音的标准度 |
 | fluency | double | 录入语音的流利度 |
