@@ -31,7 +31,7 @@ json格式的text通过<a href="http://101.231.106.182:5000">置题工具</a>编
 * **3）复述题语法**
 >  适用于口头作文和复数题型<br>需要在置题工具中将口头作文或是复述题可能的答案都罗列出来，复述题和口头作文强烈建议使用该语法
 
-* **4）韵律评测json**
+* **4）音标评测json**
 
 韵律评测的json中需要标注音标的开始位置，结束位置和字节长度，如下：
 ```
@@ -41,6 +41,11 @@ json格式的text通过<a href="http://101.231.106.182:5000">置题工具</a>编
 {"Type":"phone","Position":{"Start":12,"Length":3},"Value":["n·æ·ʃ"]},
 {"Type":"phone","Position":{"Start":16,"Length":3},"Value":["n·ə·l"]}]}
 
+```
+
+* **5）连读标记**
+```
+{"Grammar": "", "GrammarWeight": "", "Version": 1, "DisplayText": "Far away", "Markers": [{"Position": {"Start": 0, "Length": 8}, "Type": "Linking"}]}
 ```
 
 
