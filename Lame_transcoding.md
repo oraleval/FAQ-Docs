@@ -1,4 +1,4 @@
-## Lame 库转码函数
+## Lame 库PCM转成mp3函数
 
 ```
 public byte[] getMp3(byte[] pcm){
