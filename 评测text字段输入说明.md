@@ -45,8 +45,18 @@ json格式的text通过<a href="http://101.231.106.182:5000">置题工具</a>编
 
 * **5）连读标记**
 ```
-{"Grammar": "", "GrammarWeight": "", "Version": 1, "DisplayText": "Far away", "Markers": [{"Position": {"Start": 0, "Length": 8}, "Type": "Linking"}]}
+{"Grammar": "", "GrammarWeight": "", "Version": 1, "DisplayText": "Far away from home", "Markers": [{"Position": {"Start": 0, "Length": 8}, "Type": "Linking"}]}
 ```
+
+| | |
+| ----- | ----- |
+| 字段名称 | 含义 |
+| Grammar | 固定字段 |
+| GrammarWeight | 固定字段 |
+| DisplayText | 评测文本 |
+| Markers | Position：位置信息；Start：连读开始位置，序号从0开始；Length：连读文本的长度 |
+| Type | linking，连读标记 |
+
 
 
 ### 3.text字段开启特定功能
