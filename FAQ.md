@@ -14,7 +14,7 @@
 > 支持Android、iOS、Windows、linux
 
 * 按照协议划分
-> 支持基于socket的私有协议和HTTP/HTTPS两种协议。私有协议包含Android平台SDK，iOS平台SDK, flash 平台SDK，其他web端或是后端调用多数是使用http
+> 支持基于socket的私有协议和HTTP/HTTPS两种协议。私有协议包含Android平台SDK，iOS平台SDK, flash 平台SDK，其他web端或是后端调用多数是使用http,支持微信小程序、微信公众号
 
 * 按照支持的语言进行划分
 > Android和ios源码；java；H5、PHP、JS等前端语言
