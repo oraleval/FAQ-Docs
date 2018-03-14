@@ -48,6 +48,11 @@ json格式的text通过<a href="http://101.231.106.182:5000">置题工具</a>编
 {"Grammar": "", "GrammarWeight": "", "Version": 1, "DisplayText": "Far away from home", "Markers": [{"Position": {"Start": 0, "Length": 8}, "Type": "Linking"}]}
 ```
 
+* **6）升降调标记**
+```
+{"Grammar": "", "GrammarWeight": "", "DisplayText": "Well I'm only supposed to use it for official business", "Markers": [{"Position": {"Start": 46, "Length": 8}, "Type": "Tone", "Value": 1}], "Versions": 1}
+```
+
 | | |
 | ----- | ----- |
 | 字段名称 | 含义 |
