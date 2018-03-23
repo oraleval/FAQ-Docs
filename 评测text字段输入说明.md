@@ -35,11 +35,11 @@ json格式的text通过<a href="http://101.231.106.182:5000">置题工具</a>编
 
 韵律评测的json中需要标注音标的开始位置，结束位置和字节长度，如下：
 ```
-{"Version":1,"DisplayText":"ɪntər ɪntər næʃ nəl","Markers":[
+{"Version":1,"DisplayText":"inter inter nation nal","Markers":[
 {"Type":"phone","Position":{"Start":0,"Length":5},"Value":["ɪ·n·t·ə·r"]},
 {"Type":"phone","Position":{"Start":6,"Length":5},"Value":["ɪ·n·t·ə·r"]},
-{"Type":"phone","Position":{"Start":12,"Length":3},"Value":["n·æ·ʃ"]},
-{"Type":"phone","Position":{"Start":16,"Length":3},"Value":["n·ə·l"]}]}
+{"Type":"phone","Position":{"Start":12,"Length":6},"Value":["n·æ·ʃ"]},
+{"Type":"phone","Position":{"Start":19,"Length":3},"Value":["n·ə·l"]}]}
 
 ```
 
