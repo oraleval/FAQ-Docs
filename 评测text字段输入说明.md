@@ -76,7 +76,7 @@ json格式的text通过<a href="http://101.231.106.182:5000">置题工具</a>编
 | GrammarWeight | 固定字段 |
 | DisplayText | 评测文本 |
 | Markers | Position：位置信息；Start：连读开始位置，序号从0开始；Length：连读文本的长度 |
-| Type | linking，连读标记 |
+| Type | Linking，连读标记;Tone是升降调标记，Value的值是1（降调）、2（平调）、3（升调）;输出json中有senTone，0代表调错误，1代表正确 |
 
 
 
@@ -90,7 +90,7 @@ json格式的text通过<a href="http://101.231.106.182:5000">置题工具</a>编
         "point" :4,
         "phone":true
     },
-     "AudioCheck": true,
+     "AudioCheckShow": 60,
     "DisplayText": "hello world"
  }
 ```
