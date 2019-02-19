@@ -47,7 +47,7 @@ json格式的text通过<a href="http://101.231.106.182:5000">置题工具</a>编
 * **3）复述题语法**
 >  适用于口头作文和复数题型<br>需要在置题工具中将口头作文或是复述题可能的答案都罗列出来，复述题和口头作文强烈建议使用该语法
 
-* **4）音标评测json**
+* **4）音标评测标记**
 
 韵律评测的json中需要标注音标的开始位置，结束位置和字节长度，如下：
 ```
@@ -64,7 +64,12 @@ json格式的text通过<a href="http://101.231.106.182:5000">置题工具</a>编
 {"Grammar": "", "GrammarWeight": "", "Version": 1, "DisplayText": "Far away from home", "Markers": [{"Position": {"Start": 0, "Length": 8}, "Type": "Linking"}]}
 ```
 
-* **6）升降调标记**
+* **6）重读标记**
+```
+{"Grammar": "", "GrammarWeight": "", "Version": 1, "DisplayText": "you are late", "Markers": [{"Position": {"Start": 8, "Length": 4}, "Type": "SentenceStress"}]}
+```
+
+* **7）升降调标记**
 ```
 {"Grammar": "", "GrammarWeight": "", "DisplayText": "Well I'm only supposed to use it for official business", "Markers": [{"Position": {"Start": 46, "Length": 8}, "Type": "Tone", "Value": 1}], "Versions": 1}
 ```
@@ -76,8 +81,8 @@ json格式的text通过<a href="http://101.231.106.182:5000">置题工具</a>编
 | GrammarWeight | 固定字段 |
 | DisplayText | 评测文本 |
 | Markers | Position：位置信息；Start：连读开始位置，序号从0开始；Length：连读文本的长度 |
-| Type | Linking，连读标记;Tone是升降调标记，Value的值是1（降调）、2（平调）、3（升调）;输出json中有senTone，0代表调错误，1代表正确 |
-
+| Type | Linking，连读标记;<br>Tone，升降调标记，输出json中有senTone，0代表调错误，1代表正确<br>SentenceStress，重读标记，用于标记句子中哪些单词是重读；返回json含有StressOfSent，0代表重读错误，1代表重读正确；<br>phone，音标标记 |
+| Value | 在Type内容为phone和Tone时生效，Type为phone时，值为IPA88格式音标的数组，；Type为Tone时，值为1（降调）,2（平调）,3（升调） |
 
 
 ### 3.text字段开启特定功能
