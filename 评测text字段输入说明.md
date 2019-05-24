@@ -82,7 +82,7 @@ json格式的text通过<a href="http://101.231.106.182:5000">置题工具</a>编
 | DisplayText | 评测文本 |
 | Markers | Position：位置信息；Start：连读开始位置，序号从0开始；Length：连读文本的长度 |
 | Type | Linking，连读标记;<br>Tone，升降调标记，输出json中有senTone，0代表调错误，1代表正确<br>SentenceStress，重读标记，用于标记句子中哪些单词是重读；返回json含有StressOfSent，0代表重读错误，1代表重读正确；<br>phone，音标标记 |
-| Value | 在Type内容为phone和Tone时生效，Type为phone时，值为IPA88格式音标的数组，；Type为Tone时，值为1（降调）,2（平调）,3（升调） |
+| Value | 在Type内容为phone和Tone时生效，Type为phone时，值为IPA88格式音标的数组，；Type为Tone时，值为1（升调）,2（平调）,3（降调） |
 
 
 ### 3.text字段开启特定功能
