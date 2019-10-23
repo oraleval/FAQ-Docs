@@ -76,7 +76,10 @@ json格式的text通过<a href="http://101.231.106.182:5000">置题工具</a>编
 
 * **6）重读标记**
 ```
+原有方式：
 {"Grammar": "", "GrammarWeight": "", "Version": 1, "DisplayText": "you are late", "Markers": [{"Position": {"Start": 8, "Length": 4}, "Type": "SentenceStress"}]}
+简化标记方式：
+you are late[s:]
 ```
 
 * **7）升降调标记**
