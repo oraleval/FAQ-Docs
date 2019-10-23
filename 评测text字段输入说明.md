@@ -71,12 +71,15 @@ json格式的text通过<a href="http://101.231.106.182:5000">置题工具</a>编
 
 * **5）连读标记**
 ```
+原有标记方式：
 {"Grammar": "", "GrammarWeight": "", "Version": 1, "DisplayText": "Far away from home", "Markers": [{"Position": {"Start": 0, "Length": 8}, "Type": "Linking"}]}
+简化标记方式：
+Far[c:]away from home
 ```
 
 * **6）重读标记**
 ```
-原有方式：
+原有标记方式：
 {"Grammar": "", "GrammarWeight": "", "Version": 1, "DisplayText": "you are late", "Markers": [{"Position": {"Start": 8, "Length": 4}, "Type": "SentenceStress"}]}
 简化标记方式：
 you are late[s:]
@@ -84,7 +87,10 @@ you are late[s:]
 
 * **7）升降调标记**
 ```
+原有标记方式：
 {"Grammar": "", "GrammarWeight": "", "DisplayText": "Well I'm only supposed to use it for official business", "Markers": [{"Position": {"Start": 46, "Length": 8}, "Type": "Tone", "Value": 1}], "Versions": 1}
+简化标记方式：
+Well I'm only supposed to use it for official business[t:r]
 ```
 
 | | |
@@ -96,8 +102,11 @@ you are late[s:]
 | Markers | Position：位置信息；Start：连读开始位置，序号从0开始；Length：连读文本的长度 |
 | Type | Linking，连读标记;<br>Tone，升降调标记，输出json中有senTone，0代表调错误，1代表正确<br>SentenceStress，重读标记，用于标记句子中哪些单词是重读；返回json含有StressOfSent，0代表重读错误，1代表重读正确；<br>phone，音标标记 |
 | Value | 在Type内容为phone和Tone时生效，Type为phone时，值为IPA88格式音标的数组，；Type为Tone时，值为1（升调）,2（平调）,3（降调） |
-
-
+简化标记 说明
+|----- | ------ |
+ 重读：需要重读的单词后加标记[s:]，适用用范围为单词或句子中的一个单词；
+ 连读：需要连读的两个或多个词之间加标记[c:]，适用范围为两个词或是句子中的两个词或是多个词；
+ 升级调：需要升级调的句子，适用范围为句子；
 ### 3.text字段开启特定功能
 
 ```
