@@ -102,11 +102,11 @@ Well I'm only supposed to use it for official business[t:r]
 | Markers | Position：位置信息；Start：连读开始位置，序号从0开始；Length：连读文本的长度 |
 | Type | Linking，连读标记;<br>Tone，升降调标记，输出json中有senTone，0代表调错误，1代表正确<br>SentenceStress，重读标记，用于标记句子中哪些单词是重读；返回json含有StressOfSent，0代表重读错误，1代表重读正确；<br>phone，音标标记 |
 | Value | 在Type内容为phone和Tone时生效，Type为phone时，值为IPA88格式音标的数组，；Type为Tone时，值为1（升调）,2（平调）,3（降调） |
-简化标记 说明
 |----- | ------ |
+简化标记 说明
 | 重读[s:] | 需要重读的单词后加标记重读标记，适用用范围为单词或句子中的一个单词 |
 | 连读[c] | 需要连读的两个或多个词之间加标记[c:]，适用范围为两个词或是句子中的两个词或是多个词 |
-| 升级调[t:r] 和[t:f] | 适用范围为句子，需要声调的句子末尾加标记[t:r]，需要降调的句子末尾加标记[t:f] |
+| 升降调[t:r] 和[t:f] | 适用范围为句子，需要升调的句子末尾加标记[t:r]，需要降调的句子末尾加标记[t:f] |
 ### 3.text字段开启特定功能
 
 ```
